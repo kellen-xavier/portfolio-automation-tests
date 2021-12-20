@@ -1,30 +1,26 @@
 package test;
 
-import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.testng.annotations.BeforeMethod;
-import pages.HomeLogin;
+//import org.junit.jupiter.api.Test;
+
+import org.testng.annotations.Test;
+import pages.BasePage;
+import pages.HomePage;
 import pages.LoginPage;
-import utils.BaseTest;
 
-public class userLogaTest extends BaseTest {
+public class userLogaTest  extends BasePage {
 
-    public HomeLogin homeLogin;
+    public HomePage homeLogin;
     private LoginPage loginPage;
-    @BeforeMethod
-    public void initialize(){
-
-        homeLogin = new HomeLogin(driver);
-
-    }
+    //@BeforeMethod
+    //public void initialize(){
+      //  HomeLogin = new HomeLogin(driver);
+    //}
 
     @Test
-    public void setLoginPage() {
-        driver.get(BASE_URL_TEST);
-        driver.findElement(By.id("username")).click();
-        loginPage username = new loginPage(driver);
-        driver.findElement(By.id("password")).click();
-        loginPage password = new loginPage(driver);
+    public void efetuarLogin() {
+        LoginPage loginPage = new LoginPage();
+        loginPage.setLoginPage("tomsmith", "SuperSecretPassword!");
+
     }
 }
 
