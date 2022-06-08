@@ -12,10 +12,10 @@ e manutenção no ciclo de vida do software. Evitando bugs no sistema com testes
 
 
 ---
-**Requisitos**:
+**Requisitos para configuração**:
 
-IDE intellij,
-Chromedriver,
+[Chromedriver](https://chromedriver.chromium.org/downloads),
+
 JDK 11.0.11,
 
 Selenium Webdriver
